@@ -1,14 +1,15 @@
-import React from 'react';
-import './App.css';
-import { Header } from './component/Header';
-import { Balance } from './component/Balance';
-import { IncomeExpenses } from './component/IncomeExpenses';
-import { History } from './component/History';
-import { Transaction } from './component/Transaction';
+import React from "react";
+import "./App.css";
+import { Header } from "./component/Header";
+import { Balance } from "./component/Balance";
+import { IncomeExpenses } from "./component/IncomeExpenses";
+import { History } from "./component/History";
+import { Transaction } from "./component/Transaction";
+import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Header />
       <div className="container">
         <Balance />
@@ -16,7 +17,7 @@ function App() {
         <History />
         <Transaction />
       </div>
-    </div>
+    </GlobalProvider>
   );
 }
 
